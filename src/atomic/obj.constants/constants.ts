@@ -9,9 +9,7 @@ export const fontSize = {
 }
 
 export const API = {
-  BASE_URL: '',
-  API_KEY: '',
-  IMG_URL: 'https://image.tmdb.org/t/p/w300'
+  BASE_URL: 'https://swapi.dev/api'
 }
 
 export const lineHeight = {
@@ -23,12 +21,12 @@ export const lineHeight = {
 export const fontFamily = 'Roboto, sans-sarif;'
 
 export const colors = {
-  primary: '#c62e65',
-  secundary: '#d63af9',
-  background_primary: '#111',
+  primary: '#999',
+  secundary: '#fff',
+  background_primary: '#151515',
   background_secundary: '#fff',
-  text: '#FFF',
-  red: '#E50914',
+  text: '#aaa',
+  red: '#9e4f60',
   black: '#141414',
   black_secondary: '#000',
   green: '#46d369',
@@ -43,3 +41,5 @@ export const spacing = {
   medium: '12px',
   large: '20px'
 }
+
+export const LOGO = 'https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_stacked-336c62367939.png'
