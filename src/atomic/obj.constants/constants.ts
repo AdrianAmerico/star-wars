@@ -43,3 +43,5 @@ export const spacing = {
 }
 
 export const LOGO = 'https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_stacked-336c62367939.png'
+
+export const BACKGROUND = 'https://react-star-wars-onset.herokuapp.com/static/media/bg.6c52fb16.jpg'
