@@ -5,7 +5,6 @@ import List from '@mui/material/List'
 import Divider from '@mui/material/Divider'
 import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
-import { Teste } from './drawerheader.component.style'
 
 interface Props {
   open: boolean;
@@ -16,7 +15,6 @@ interface Props {
 
 export const DrawerHeader = ({ open, toggleDrawer }: Props) => {
   return (
-    <Teste>
       <Drawer anchor={'left'} open={open} onClose={toggleDrawer(false)}>
         <Box
           sx={{ width: 250 }}
@@ -47,6 +45,5 @@ export const DrawerHeader = ({ open, toggleDrawer }: Props) => {
           <Divider />
         </Box>
       </Drawer>
-    </Teste>
   )
 }
