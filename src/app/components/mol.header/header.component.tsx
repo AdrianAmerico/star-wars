@@ -24,7 +24,6 @@ export const Header = () => {
           <TextField
             placeholder="Procurar..."
             color="primary"
-            style={{ backgroundColor: '#343434' }}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
