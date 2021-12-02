@@ -1,5 +1,7 @@
 import React, { createContext } from 'react'
-
+import { ThemeProvider as MuiThemeProvider } from '@mui/material'
+import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components'
+import { defaultTheme, GlobalStyle, theme } from '../../atomic'
 interface IGlobalProps {
   data: any[];
   setData: React.Dispatch<React.SetStateAction<any[]>>;
@@ -12,7 +14,12 @@ const GlobalContextProvider: React.FC = ({ children }) => {
 
   return (
     <GlobalContext.Provider value={{ data, setData }}>
-      {children}
+      <StyledComponentsThemeProvider theme={defaultTheme}>
+        <MuiThemeProvider theme={theme}>
+          <GlobalStyle />
+          {children}
+        </MuiThemeProvider>
+      </StyledComponentsThemeProvider>
     </GlobalContext.Provider>
   )
 }
