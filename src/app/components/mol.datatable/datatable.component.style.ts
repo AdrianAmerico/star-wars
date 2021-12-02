@@ -28,4 +28,10 @@ th {
     }
   }
 }
+
+th, td {
+  :last-child {
+    display: none;
+  }
+}
 `
