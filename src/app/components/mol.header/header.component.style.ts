@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { spacing } from '../../../atomic'
 
 export const HeaderStyled = styled.header`
-  position: fixed;
   z-index: 101;
   width: 100%;
   top: 0;

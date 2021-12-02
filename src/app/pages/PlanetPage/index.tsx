@@ -1,8 +1,8 @@
 import React from 'react'
-import MUIDataTable from 'mui-datatables'
+import { Header, DataTable } from '../../components'
 
 export const PlanetPage = () => {
-  const columns = ['Name', 'Title', 'Location']
+  const columns = ['Nome', 'Title', 'Location']
 
   const data = [
     ['Gabby George', 'Business Analyst', 'Minneapolis'],
@@ -23,26 +23,10 @@ export const PlanetPage = () => {
     ['Donna Marie', 'Business Manager', 'Annapolis']
   ]
 
-  const teste = (props: any) => {
-    console.log(props)
-  }
   return (
-      <MUIDataTable
-        title={'ACME Employee list'}
-        data={data}
-        columns={columns}
-        options={{
-          search: true,
-          download: true,
-          print: true,
-          viewColumns: true,
-          filter: true,
-          filterType: 'dropdown',
-          tableBodyHeight: '400px',
-          tableBodyMaxHeight: '',
-          onRowClick: (props: any) => teste(props),
-          selectableRowsHideCheckboxes: true
-        }}
-      />
+    <React.Fragment>
+      <Header />
+      <DataTable title={'Planetas'} data={data} columns={columns} onClick={(props) => console.log(props)}/>
+    </React.Fragment>
   )
 }
