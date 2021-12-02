@@ -1,4 +1,4 @@
-export const columns = ['Nome', 'Peso', 'altura', 'Cabelo', 'Pele', 'Aniversário', 'Gênero']
+export const columns = ['Nome', 'Peso', 'altura', 'Cabelo', 'Pele', 'Aniversário', 'Gênero', '...']
 export const data = [
   ['Gabby George', 'Business Analyst', 'Minneapolis'],
   [

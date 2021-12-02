@@ -1,10 +1,20 @@
 import React from 'react'
 import { InputAdornment, TextField } from '@mui/material'
-import { A, Li, LOGO, Ul, P } from '../../../../atomic'
-import { DivCenter, DivImgStyled, ImgStyled, NavStyled, Search, SectionStyled, HeaderDesktopWrapper } from './headerdesktop.component.style'
+import { A, Li, LOGO, Ul, P, routes } from '../../../../atomic'
+import {
+  DivCenter,
+  DivImgStyled,
+  ImgStyled,
+  NavStyled,
+  Search,
+  SectionStyled,
+  HeaderDesktopWrapper
+} from './headerdesktop.component.style'
 import SearchIcon from '@mui/icons-material/Search'
+import { useNavigate } from 'react-router-dom'
 
 export const HeaderDesktop = () => {
+  const navigate = useNavigate()
   return (
     <HeaderDesktopWrapper>
       <SectionStyled>
@@ -30,7 +40,11 @@ export const HeaderDesktop = () => {
       </SectionStyled>
       <NavStyled>
         <Ul>
-          <Li>
+          <Li
+            onClick={() => {
+              navigate(routes.people)
+            }}
+          >
             <A>
               <P>Pessoas</P>
             </A>

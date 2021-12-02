@@ -1,4 +1,6 @@
 export const routes = {
   base: '/',
-  planet: '/planet'
+  people: '/people',
+  planet: '/planet',
+  movie: '/movie'
 }
