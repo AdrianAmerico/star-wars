@@ -18,6 +18,15 @@ export const lineHeight = {
   large: 2
 }
 
+export const fontWeight = {
+  xxSmall: 200,
+  xSmall: 300,
+  small: 400,
+  medium: 500,
+  large: 600,
+  xLarge: 700,
+  xxLarge: 800
+}
 export const fontFamily = 'Roboto, sans-sarif;'
 
 export const colors = {
@@ -32,7 +41,9 @@ export const colors = {
   green: '#46d369',
   lightGray: 'gray',
   gray: '#333',
-  darkGray: '#999'
+  grayMedium: '#343434',
+  darkGray: '#999',
+  yellow: '#ebd800'
 }
 
 export const spacing = {
@@ -42,6 +53,8 @@ export const spacing = {
   large: '20px'
 }
 
-export const LOGO = 'https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_stacked-336c62367939.png'
+export const LOGO =
+  'https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_stacked-336c62367939.png'
 
-export const BACKGROUND = 'https://react-star-wars-onset.herokuapp.com/static/media/bg.6c52fb16.jpg'
+export const BACKGROUND =
+  'https://react-star-wars-onset.herokuapp.com/static/media/bg.6c52fb16.jpg'

@@ -1,2 +1,2 @@
-export * from './defaultTheme.component.style'
 export * from './globalStyle.component.style'
+export * from './theme'

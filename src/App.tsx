@@ -1,20 +1,23 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider as MuiThemeProvider } from '@mui/material'
+import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components'
 import { AppContainer } from './app/components'
 import { GlobalContextProvider } from './app/context'
+import { defaultTheme, GlobalStyle, theme } from './atomic'
 import Router from './app/pages/Router'
-import { defaultTheme, GlobalStyle } from './atomic'
 
 const App = () => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <GlobalContextProvider>
-        <AppContainer>
-          <Router />
-          <GlobalStyle />
-        </AppContainer>
-      </GlobalContextProvider>
-    </ThemeProvider>
+    <StyledComponentsThemeProvider theme={defaultTheme}>
+      <MuiThemeProvider theme={theme}>
+        <GlobalContextProvider>
+          <AppContainer>
+            <Router />
+            <GlobalStyle />
+          </AppContainer>
+        </GlobalContextProvider>
+      </MuiThemeProvider>
+    </StyledComponentsThemeProvider>
   )
 }
 

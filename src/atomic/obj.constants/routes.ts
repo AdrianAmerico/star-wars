@@ -1,3 +1,4 @@
 export const routes = {
-  base: '/'
+  base: '/',
+  planet: '/planet'
 }
