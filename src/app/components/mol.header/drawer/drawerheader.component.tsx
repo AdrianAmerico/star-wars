@@ -5,7 +5,8 @@ import List from '@mui/material/List'
 import Divider from '@mui/material/Divider'
 import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
-
+import { useNavigate } from 'react-router'
+import { routes } from '../../../../atomic'
 interface Props {
   open: boolean;
   toggleDrawer: (
@@ -14,6 +15,7 @@ interface Props {
 }
 
 export const DrawerHeader = ({ open, toggleDrawer }: Props) => {
+  const navigate = useNavigate()
   return (
       <Drawer anchor={'left'} open={open} onClose={toggleDrawer(false)}>
         <Box
@@ -29,18 +31,18 @@ export const DrawerHeader = ({ open, toggleDrawer }: Props) => {
           }}
         >
           <List>
-            <ListItem button>
-              <ListItemText/>
+            <ListItem button onClick={() => navigate(routes.base)}>
+              <ListItemText primary={'Página Principal'}/>
             </ListItem>
-            <ListItem button>
+            <ListItem button onClick={() => navigate(routes.people)}>
               <ListItemText primary={'Pessoas'} />
             </ListItem>
-            <ListItem button>
+            {/* <ListItem button>
               <ListItemText primary={'Naves'} />
             </ListItem>
             <ListItem button>
               <ListItemText primary={'Planetas'} />
-            </ListItem>
+            </ListItem> */}
           </List>
           <Divider />
         </Box>

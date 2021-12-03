@@ -6,11 +6,6 @@ import { DrawerHeader } from './drawer'
 
 export const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState<boolean>(false)
-  const [text, setText] = React.useState<string>('')
-
-  const onChangeText = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-    setText(event.target.value)
-  }
 
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -21,13 +16,12 @@ export const Header = () => {
       ) {
         return
       }
-
       setIsDrawerOpen(!isDrawerOpen)
     }
 
   return (
     <HeaderStyled>
-      <HeaderDesktop onChange={onChangeText} text={text} />
+      <HeaderDesktop />
       <HeaderMobile toggleDrawer={toggleDrawer} />
       <DrawerHeader open={isDrawerOpen} toggleDrawer={toggleDrawer} />
     </HeaderStyled>

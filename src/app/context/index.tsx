@@ -3,17 +3,21 @@ import { ThemeProvider as MuiThemeProvider } from '@mui/material'
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components'
 import { defaultTheme, GlobalStyle, theme } from '../../atomic'
 interface IGlobalProps {
-  data: any[];
-  setData: React.Dispatch<React.SetStateAction<any[]>>;
+  text: string
+  onChangeText: (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => void
 }
 
 const GlobalContext = createContext({} as IGlobalProps)
 
 const GlobalContextProvider: React.FC = ({ children }) => {
-  const [data, setData] = React.useState<any[]>([])
+  const [text, setText] = React.useState<string>('')
+
+  const onChangeText = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    setText(event.target.value)
+  }
 
   return (
-    <GlobalContext.Provider value={{ data, setData }}>
+    <GlobalContext.Provider value={{ text, onChangeText }}>
       <StyledComponentsThemeProvider theme={defaultTheme}>
         <MuiThemeProvider theme={theme}>
           <GlobalStyle />

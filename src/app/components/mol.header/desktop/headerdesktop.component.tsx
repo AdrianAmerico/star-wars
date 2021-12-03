@@ -1,40 +1,39 @@
 import React from 'react'
 import { InputAdornment, TextField } from '@mui/material'
-import { A, Li, LOGO, Ul, P, routes } from '../../../../atomic'
+import { A, Li, LOGO, Ul, P, routes, Search } from '../../../../atomic'
 import {
   DivCenter,
   DivImgStyled,
   ImgStyled,
   NavStyled,
-  Search,
   SectionStyled,
   HeaderDesktopWrapper
 } from './headerdesktop.component.style'
 import SearchIcon from '@mui/icons-material/Search'
 import { useNavigate } from 'react-router-dom'
 import { useNavigator } from '../../../hook/useNavigator'
+import { GlobalContext } from '../../../context'
 
-interface Props {
-  text: string;
-  onChange: (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => void;
-}
-
-export const HeaderDesktop = ({ text, onChange }: Props) => {
-  const { goToPeopleDetails } = useNavigator()
+export const HeaderDesktop = () => {
+  const { goToHomePage, goToPeopleDetails } = useNavigator()
+  const { text, onChangeText } = React.useContext(GlobalContext)
   const navigate = useNavigate()
+
   return (
     <HeaderDesktopWrapper>
       <SectionStyled>
         <div />
-        <DivImgStyled>
+        <DivImgStyled onClick={goToHomePage}>
           <ImgStyled src={LOGO} />
         </DivImgStyled>
         <DivCenter>
           <TextField
+            fullWidth
+            style={{ width: '100%' }}
             placeholder="Procurar..."
             color="primary"
             value={text}
-            onChange={(event) => onChange(event)}
+            onChange={(event) => onChangeText(event)}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
@@ -59,6 +58,7 @@ export const HeaderDesktop = ({ text, onChange }: Props) => {
             </A>
           </Li>
 
+          {/*
           <Li>
             <A>
               <P>Naves</P>
@@ -70,6 +70,7 @@ export const HeaderDesktop = ({ text, onChange }: Props) => {
               <P>Planetas</P>
             </A>
           </Li>
+          */}
         </Ul>
       </NavStyled>
     </HeaderDesktopWrapper>

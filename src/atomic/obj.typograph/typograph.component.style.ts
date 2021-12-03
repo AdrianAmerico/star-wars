@@ -43,3 +43,12 @@ export const P = styled.p`
   text-align: center;
   display: block;
 `
+export const Search = styled.span`
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  :hover {
+    cursor: pointer;
+  }
+`

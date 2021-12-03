@@ -30,13 +30,6 @@ export const ImgStyled = styled.img`
   border: none;
   background-color: black;
   margin: ${spacing.medium} auto;
-`
-
-export const Search = styled.span`
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   :hover {
     cursor: pointer;
   }

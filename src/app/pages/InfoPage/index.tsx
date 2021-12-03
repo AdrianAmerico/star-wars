@@ -4,12 +4,13 @@ import { useParams } from 'react-router'
 import { DataTable, Header, Loading } from '../../components'
 import { mainAPI } from '../../data/request'
 import { columns } from './infopage.component.mock'
+import { IMovies } from '../../../atomic'
 import axios from 'axios'
-import { IMovies } from '../../../atomic/obj.constants/types'
 
 export const InfoPage = () => {
   const [movieInfo, setMovieInfo] = React.useState([])
   const { name } = useParams()
+  document.title = `Informações - ${name}`
 
   const getMoviesData = async (filmArr: string[]) => {
     const movieDataArr: any = []
@@ -18,6 +19,7 @@ export const InfoPage = () => {
       const data = await axios.get(filmArr[i]).then((data) => data.data)
       movieDataArr.push(data)
     }
+
     const movieData = movieDataArr.map(
       ({ title, director, producer, release_date }: IMovies) => {
         return [
@@ -49,7 +51,7 @@ export const InfoPage = () => {
           title={'Filmes'}
           data={movieInfo}
           columns={columns}
-          onClick={(props: any) => console.log(props)}
+          onClick={() => {}}
         />
           )
         : (

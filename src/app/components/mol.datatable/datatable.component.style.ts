@@ -17,7 +17,6 @@ th {
   flex-direction: column;
   div {
     :nth-child(1) {
-      background: linear-gradient(0deg, transparent, black 80%) no-repeat !important;
        background-color: transparent !important;
       svg {
         color: #aaa;
@@ -27,5 +26,8 @@ th {
       background: transparent !important;
     }
   }
+}
+td {
+  color: white;
 }
 `
