@@ -53,7 +53,7 @@ Com a atualização de bibliotecas utilizadas no projeto, a forma que algumas co
 - Com essa rota, cada um dos componentes dentro dela iria acompanhar com o Header mas nessa versão retorna erro e não é funcional, deixando assim as páginas com repetições que seriam desnecessárias caso isso fosse corrigido.
 
 **MUI**
-- Na versão 5, foi alterado a forma onde era estilizado e mesmo lendo sobre como agora é feito, continua sendo confuso e utilizei outros meios para estilização dos componentes dessa lib
+- Na versão 5, foi alterado a forma onde era estilizado e mesmo lendo sobre como agora é feito, continua sendo confuso e utilizei outros meios para estilização dos componentes dessa lib.
 
 **react-router-dom**
 - A nova forma de utilizar hooks como o useHistory e useParams foi alterado, mas consegui corrigir este problema.
