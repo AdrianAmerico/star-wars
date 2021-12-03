@@ -21,14 +21,13 @@ export const Header = () => {
       ) {
         return
       }
-
       setIsDrawerOpen(!isDrawerOpen)
     }
 
   return (
     <HeaderStyled>
       <HeaderDesktop onChange={onChangeText} text={text} />
-      <HeaderMobile toggleDrawer={toggleDrawer} />
+      <HeaderMobile toggleDrawer={toggleDrawer} text={text} onChange={onChangeText}/>
       <DrawerHeader open={isDrawerOpen} toggleDrawer={toggleDrawer} />
     </HeaderStyled>
   )

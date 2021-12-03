@@ -23,7 +23,6 @@ export const DataTable = ({ title, data, columns, onClick }: Props) => {
           viewColumns: true,
           filter: true,
           filterType: 'dropdown',
-          tableBodyHeight: '400px',
           tableBodyMaxHeight: '',
           onRowClick: (props: any) => onClick(props),
           selectableRowsHideCheckboxes: true

@@ -30,6 +30,9 @@ export const ImgStyled = styled.img`
   border: none;
   background-color: black;
   margin: ${spacing.medium} auto;
+  :hover {
+    cursor: pointer;
+  }
 `
 
 export const Search = styled.span`

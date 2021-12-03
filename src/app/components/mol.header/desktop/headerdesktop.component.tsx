@@ -20,17 +20,19 @@ interface Props {
 }
 
 export const HeaderDesktop = ({ text, onChange }: Props) => {
-  const { goToPeopleDetails } = useNavigator()
+  const { goToHomePage, goToPeopleDetails } = useNavigator()
   const navigate = useNavigate()
   return (
     <HeaderDesktopWrapper>
       <SectionStyled>
         <div />
-        <DivImgStyled>
+        <DivImgStyled onClick={goToHomePage}>
           <ImgStyled src={LOGO} />
         </DivImgStyled>
         <DivCenter>
           <TextField
+          fullWidth
+          style={{ width: '100%' }}
             placeholder="Procurar..."
             color="primary"
             value={text}
@@ -59,6 +61,7 @@ export const HeaderDesktop = ({ text, onChange }: Props) => {
             </A>
           </Li>
 
+          {/*
           <Li>
             <A>
               <P>Naves</P>
@@ -70,6 +73,7 @@ export const HeaderDesktop = ({ text, onChange }: Props) => {
               <P>Planetas</P>
             </A>
           </Li>
+          */}
         </Ul>
       </NavStyled>
     </HeaderDesktopWrapper>
