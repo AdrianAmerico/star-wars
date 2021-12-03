@@ -6,16 +6,16 @@ import SearchIcon from '@mui/icons-material/Search'
 import { useNavigate } from 'react-router'
 import { routes } from '../../../../atomic'
 import HeaderMobileModal from './mol.headermobilemodal'
+import { GlobalContext } from '../../../context'
 interface Props {
   toggleDrawer: (
     open: boolean
   ) => (event: React.KeyboardEvent | React.MouseEvent) => void;
-  text: string
-  onChange: (event: any) => void
 }
 
-export const HeaderMobile = ({ toggleDrawer, onChange, text }: Props) => {
+export const HeaderMobile = ({ toggleDrawer }: Props) => {
   const [isOpenModal, setIsOpenModal] = React.useState(false)
+  const { text, onChangeText } = React.useContext(GlobalContext)
 
   const handleOpen = () => setIsOpenModal(true)
   const handleClose = () => setIsOpenModal(false)
@@ -39,7 +39,7 @@ export const HeaderMobile = ({ toggleDrawer, onChange, text }: Props) => {
           <SearchIcon />
         </span>
       </HeaderWrapperMobile>
-      <HeaderMobileModal open={isOpenModal} handleClose={handleClose} text={text} onChange={onChange} />
+      <HeaderMobileModal open={isOpenModal} handleClose={handleClose} text={text} onChange={onChangeText} />
     </>
   )
 }

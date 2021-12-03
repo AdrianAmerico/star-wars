@@ -13,15 +13,13 @@ import {
 import SearchIcon from '@mui/icons-material/Search'
 import { useNavigate } from 'react-router-dom'
 import { useNavigator } from '../../../hook/useNavigator'
+import { GlobalContext } from '../../../context'
 
-interface Props {
-  text: string;
-  onChange: (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => void;
-}
-
-export const HeaderDesktop = ({ text, onChange }: Props) => {
+export const HeaderDesktop = () => {
   const { goToHomePage, goToPeopleDetails } = useNavigator()
+  const { text, onChangeText } = React.useContext(GlobalContext)
   const navigate = useNavigate()
+
   return (
     <HeaderDesktopWrapper>
       <SectionStyled>
@@ -31,12 +29,12 @@ export const HeaderDesktop = ({ text, onChange }: Props) => {
         </DivImgStyled>
         <DivCenter>
           <TextField
-          fullWidth
-          style={{ width: '100%' }}
+            fullWidth
+            style={{ width: '100%' }}
             placeholder="Procurar..."
             color="primary"
             value={text}
-            onChange={(event) => onChange(event)}
+            onChange={(event) => onChangeText(event)}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
