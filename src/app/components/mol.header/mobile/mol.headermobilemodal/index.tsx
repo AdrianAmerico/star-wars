@@ -5,32 +5,14 @@ import Modal from '@mui/material/Modal'
 import Fade from '@mui/material/Fade'
 import { InputAdornment, TextField } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
-import { Search } from '../../desktop/headerdesktop.component.style'
 import { useNavigator } from '../../../../hook/useNavigator'
-
-const style = {
-  position: 'absolute' as 'absolute',
-  top: '0',
-  left: '0',
-  right: '0',
-  background: ' linear-gradient(0deg, transparent, black 30%) no-repeat;',
-  color: '#000',
-  border: 'none',
-  p: 4,
-  '& div > div': {
-    color: '#fff',
-    ':first-child': {
-      border: '1px solid white',
-      color: '#fff'
-    }
-  }
-}
-
+import { style } from './headermobilemodal.component.style'
+import { Search } from '../../../../../atomic'
 interface Props {
   open: boolean;
-  handleClose: () => any;
+  handleClose: () => void;
   text: string;
-  onChange: (event: any) => any;
+  onChange: (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => void;
 }
 
 export default function HeaderMobileModal ({ open, handleClose, text, onChange }: Props) {

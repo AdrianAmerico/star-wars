@@ -1,11 +1,12 @@
 import React from 'react'
 import MUIDataTable from 'mui-datatables'
 import { DivStyled } from './datatable.component.style'
+import { IPeople } from '../../../atomic/obj.constants/types'
 
 interface Props {
   title: string;
-  data: any;
-  columns: any;
+  data: string[][] | IPeople[];
+  columns: string[];
   onClick: (props: any) => void;
 }
 

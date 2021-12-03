@@ -35,16 +35,6 @@ export const ImgStyled = styled.img`
   }
 `
 
-export const Search = styled.span`
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  :hover {
-    cursor: pointer;
-  }
-`
-
 export const NavStyled = styled.nav`
   left: 0;
   width: 100%;

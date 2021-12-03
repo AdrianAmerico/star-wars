@@ -1,10 +1,9 @@
-/* eslint-disable no-unused-vars */
 import React from 'react'
 import { HeaderWrapperMobile, ImgStyled } from './headermobile.component.style'
 import MenuIcon from '@mui/icons-material/Menu'
 import SearchIcon from '@mui/icons-material/Search'
 import { useNavigate } from 'react-router'
-import { routes } from '../../../../atomic'
+import { LOGO_MOBILE, routes } from '../../../../atomic'
 import HeaderMobileModal from './mol.headermobilemodal'
 import { GlobalContext } from '../../../context'
 interface Props {
@@ -28,8 +27,8 @@ export const HeaderMobile = ({ toggleDrawer }: Props) => {
         </span>
 
         <ImgStyled
-          src="https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_horiz@2x-f98247cb30aa.png"
-          alt="aa"
+          src={LOGO_MOBILE}
+          alt="Logo"
           onClick={() => {
             navigate(routes.base)
           }}

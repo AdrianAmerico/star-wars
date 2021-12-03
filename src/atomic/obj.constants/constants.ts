@@ -58,3 +58,5 @@ export const LOGO =
 
 export const BACKGROUND =
   'https://react-star-wars-onset.herokuapp.com/static/media/bg.6c52fb16.jpg'
+
+export const LOGO_MOBILE = 'https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_horiz@2x-f98247cb30aa.png'

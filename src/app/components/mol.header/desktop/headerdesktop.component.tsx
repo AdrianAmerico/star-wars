@@ -1,12 +1,11 @@
 import React from 'react'
 import { InputAdornment, TextField } from '@mui/material'
-import { A, Li, LOGO, Ul, P, routes } from '../../../../atomic'
+import { A, Li, LOGO, Ul, P, routes, Search } from '../../../../atomic'
 import {
   DivCenter,
   DivImgStyled,
   ImgStyled,
   NavStyled,
-  Search,
   SectionStyled,
   HeaderDesktopWrapper
 } from './headerdesktop.component.style'

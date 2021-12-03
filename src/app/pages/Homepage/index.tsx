@@ -5,6 +5,7 @@ import { DataTable, Header } from '../../components'
 import { columns, data } from './homepage.component.mock'
 
 export const Homepage = () => {
+  document.title = 'Página Principal'
   const navigate = useNavigate()
   return (
     <React.Fragment>

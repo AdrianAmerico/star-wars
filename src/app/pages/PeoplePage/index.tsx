@@ -5,7 +5,7 @@ import React from 'react'
 import { DataTable, Header, Loading } from '../../components'
 import { columns } from './peoplepage.component.mock'
 import { mainAPI } from '../../data/request'
-import { IPeople } from '../../../atomic/obj.constants/types'
+import { IPeople } from '../../../atomic'
 import { useNavigator } from '../../hook/useNavigator'
 import { useSearchParams } from 'react-router-dom'
 
@@ -16,6 +16,7 @@ export const PeoplePage = () => {
   const query = searchParams.get('q')
 
   React.useEffect(() => {
+    document.title = 'Página de Personagens'
     const getPeople = async () => {
       const value = await mainAPI.getPeople(query)
       const peoplesData = value?.data?.results?.map(
