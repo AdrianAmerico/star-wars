@@ -64,3 +64,49 @@ Mesmo design não sendo o meu forte, o design do site ficou bonito e as funciona
 
 ## Imagens
 
+#### Página Principal
+
+**Desktop**
+
+![Captura de tela de 2021-12-03 12-42-20](https://user-images.githubusercontent.com/73081422/144631126-106d0d41-5d32-441b-ac3a-dd7e5090098f.png)
+
+**Mobile**
+
+![Captura de tela de 2021-12-03 12-43-25](https://user-images.githubusercontent.com/73081422/144631164-1c349a37-ccdc-442f-b4c5-c49eeaf344a6.png)
+
+#### Página de Personagens
+
+**Desktop**
+
+![Captura de tela de 2021-12-03 12-48-03](https://user-images.githubusercontent.com/73081422/144631413-f2b82707-2c23-404a-846f-3e0c169e0ade.png)
+
+**Mobile**
+
+![Captura de tela de 2021-12-03 12-43-38](https://user-images.githubusercontent.com/73081422/144631302-24a7fc0d-0a64-4381-8217-d2cc7eeb2750.png)
+
+#### Página Detalhes
+
+**Desktop**
+
+![Captura de tela de 2021-12-03 12-42-36](https://user-images.githubusercontent.com/73081422/144631246-b93ce2a7-5e72-47d0-8d11-a0c3826c10b1.png)
+
+
+**Mobile**
+
+![Captura de tela de 2021-12-03 12-43-54](https://user-images.githubusercontent.com/73081422/144631340-d2ddc269-b4e4-4c10-ac8c-a38df14fd99a.png)
+
+#### Header
+
+**Desktop**
+
+![Captura de tela de 2021-12-03 12-48-44](https://user-images.githubusercontent.com/73081422/144631539-55eefa36-e697-48fc-9474-3686ac19df2b.png)
+
+![headerdesktop](https://user-images.githubusercontent.com/73081422/144631905-357050f7-00be-404e-8297-aab133d4b6c1.gif)
+
+
+**Mobile**
+
+![Captura de tela de 2021-12-03 12-51-49](https://user-images.githubusercontent.com/73081422/144632036-fc6da6ee-c5aa-4365-9a06-e7873b869cf3.png)
+
+![headermobile](https://user-images.githubusercontent.com/73081422/144631931-8ec7c213-4a84-4756-b956-981f3ff07599.gif)
+
