@@ -7,16 +7,17 @@ import { columns } from './peoplepage.component.mock'
 import { mainAPI } from '../../data/request'
 import { IPeople } from '../../../atomic/obj.constants/types'
 import { useNavigator } from '../../hook/useNavigator'
-import { useParams } from 'react-router'
+import { useSearchParams } from 'react-router-dom'
 
 export const PeoplePage = () => {
   const [people, setPeople] = React.useState<IPeople[]>([])
   const { goToPeopleMovies } = useNavigator()
-  const params = useParams()
+  const [searchParams] = useSearchParams()
+  const query = searchParams.get('q')
 
   React.useEffect(() => {
     const getPeople = async () => {
-      const value = await mainAPI.getPeople(params.name)
+      const value = await mainAPI.getPeople(query)
       const peoplesData = value?.data?.results?.map(
         ({
           name,
@@ -41,8 +42,7 @@ export const PeoplePage = () => {
       setPeople(peoplesData)
     }
     getPeople()
-    console.log(params)
-  }, [])
+  }, [query])
 
   return (
     <React.Fragment>

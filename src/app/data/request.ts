@@ -5,10 +5,10 @@ const instance = axios.create({
 })
 
 export const mainAPI = {
-  async getPeople (user = '', page = 1) {
+  async getPeople (user: string | null = '', page = 1) {
     try {
       const { data } = await instance.get(
-        `people/?page=${page}&search=${user}`
+        `people/?page=${page}&search=${user?.length ? user : ''}`
       )
 
       return {

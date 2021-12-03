@@ -8,5 +8,9 @@ export const useNavigator = () => {
   const goToPeopleMovies = (name: string) => {
     navigate(`/people/info/${name}`)
   }
-  return { goToPeopleMovies }
+
+  const goToPeopleDetails = (name: string) => {
+    navigate(`/people?q=${name}`)
+  }
+  return { goToPeopleMovies, goToPeopleDetails }
 }
