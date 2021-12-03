@@ -5,9 +5,11 @@ const instance = axios.create({
 })
 
 export const mainAPI = {
-  async getPeople (page = 1) {
+  async getPeople (user: string | null = '', page = 1) {
     try {
-      const { data } = await instance.get(`people/?page=${page}`)
+      const { data } = await instance.get(
+        `people/?page=${page}&search=${user?.length ? user : ''}`
+      )
 
       return {
         data
@@ -39,13 +41,10 @@ export const mainAPI = {
       }
     }
   },
-  async getSearchData (value: any) {
+  async getSearchData (name = '') {
     try {
-      const { data } = await instance.get(`people/?search=${value}`)
-
-      return {
-        data
-      }
+      const { data } = await instance.get(`people/?search=${name}`)
+      return data.results
     } catch (error) {
       if (error instanceof Error) {
         console.log(error)

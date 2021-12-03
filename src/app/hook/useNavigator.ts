@@ -1,12 +1,16 @@
+/* eslint-disable no-unused-vars */
 import { useNavigate } from 'react-router-dom'
 import { routes } from '../../atomic'
 
 export const useNavigator = () => {
   const navigate = useNavigate()
 
-  const goToPeopleMovies = (url: string) => {
-    localStorage.setItem('userUrl', url)
-    navigate(routes.peopleInfo)
+  const goToPeopleMovies = (name: string) => {
+    navigate(`/people/info/${name}`)
   }
-  return { goToPeopleMovies }
+
+  const goToPeopleDetails = (name: string) => {
+    navigate(`/people?q=${name}`)
+  }
+  return { goToPeopleMovies, goToPeopleDetails }
 }

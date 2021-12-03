@@ -12,8 +12,15 @@ import {
 } from './headerdesktop.component.style'
 import SearchIcon from '@mui/icons-material/Search'
 import { useNavigate } from 'react-router-dom'
+import { useNavigator } from '../../../hook/useNavigator'
 
-export const HeaderDesktop = () => {
+interface Props {
+  text: string;
+  onChange: (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => void;
+}
+
+export const HeaderDesktop = ({ text, onChange }: Props) => {
+  const { goToPeopleDetails } = useNavigator()
   const navigate = useNavigate()
   return (
     <HeaderDesktopWrapper>
@@ -26,11 +33,13 @@ export const HeaderDesktop = () => {
           <TextField
             placeholder="Procurar..."
             color="primary"
+            value={text}
+            onChange={(event) => onChange(event)}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
                   <Search>
-                    <SearchIcon />
+                    <SearchIcon onClick={() => goToPeopleDetails(text)} />
                   </Search>
                 </InputAdornment>
               )
