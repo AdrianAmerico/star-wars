@@ -4,8 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import SearchIcon from '@mui/icons-material/Search'
 import { useNavigate } from 'react-router'
 import { LOGO_MOBILE, routes } from '../../../../atomic'
-import HeaderMobileModal from './mol.headermobilemodal'
-import { GlobalContext } from '../../../context'
+import { HeaderMobileModal } from './mol.headermobilemodal'
 interface Props {
   toggleDrawer: (
     open: boolean
@@ -14,7 +13,6 @@ interface Props {
 
 export const HeaderMobile = ({ toggleDrawer }: Props) => {
   const [isOpenModal, setIsOpenModal] = React.useState(false)
-  const { text, onChangeText } = React.useContext(GlobalContext)
 
   const handleOpen = () => setIsOpenModal(true)
   const handleClose = () => setIsOpenModal(false)
@@ -38,7 +36,7 @@ export const HeaderMobile = ({ toggleDrawer }: Props) => {
           <SearchIcon />
         </span>
       </HeaderWrapperMobile>
-      <HeaderMobileModal open={isOpenModal} handleClose={handleClose} text={text} onChange={onChangeText} />
+      <HeaderMobileModal open={isOpenModal} handleClose={handleClose} />
     </>
   )
 }

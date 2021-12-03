@@ -10,13 +10,13 @@ import { useNavigator } from '../../hook/useNavigator'
 import { useSearchParams } from 'react-router-dom'
 
 export const PeoplePage = () => {
+  document.title = 'Página de Personagens'
   const [people, setPeople] = React.useState<IPeople[]>([])
   const { goToPeopleMovies } = useNavigator()
   const [searchParams] = useSearchParams()
   const query = searchParams.get('q')
 
   React.useEffect(() => {
-    document.title = 'Página de Personagens'
     const getPeople = async () => {
       const value = await mainAPI.getPeople(query)
       const peoplesData = value?.data?.results?.map(

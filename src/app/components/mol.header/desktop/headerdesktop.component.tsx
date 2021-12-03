@@ -1,6 +1,5 @@
 import React from 'react'
-import { InputAdornment, TextField } from '@mui/material'
-import { A, Li, LOGO, Ul, P, routes, Search } from '../../../../atomic'
+import { A, Li, LOGO, Ul, P, routes } from '../../../../atomic'
 import {
   DivCenter,
   DivImgStyled,
@@ -9,14 +8,14 @@ import {
   SectionStyled,
   HeaderDesktopWrapper
 } from './headerdesktop.component.style'
-import SearchIcon from '@mui/icons-material/Search'
 import { useNavigate } from 'react-router-dom'
 import { useNavigator } from '../../../hook/useNavigator'
 import { GlobalContext } from '../../../context'
+import { SearchField } from '../..'
 
 export const HeaderDesktop = () => {
   const { goToHomePage, goToPeopleDetails } = useNavigator()
-  const { text, onChangeText } = React.useContext(GlobalContext)
+  const { text } = React.useContext(GlobalContext)
   const navigate = useNavigate()
 
   return (
@@ -27,23 +26,7 @@ export const HeaderDesktop = () => {
           <ImgStyled src={LOGO} />
         </DivImgStyled>
         <DivCenter>
-          <TextField
-            fullWidth
-            style={{ width: '100%' }}
-            placeholder="Procurar..."
-            color="primary"
-            value={text}
-            onChange={(event) => onChangeText(event)}
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <Search>
-                    <SearchIcon onClick={() => goToPeopleDetails(text)} />
-                  </Search>
-                </InputAdornment>
-              )
-            }}
-          />
+          <SearchField onClick={() => goToPeopleDetails(text)} />
         </DivCenter>
       </SectionStyled>
       <NavStyled>
